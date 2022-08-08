@@ -1,0 +1,135 @@
+a {
+     color: #06c;
+}
+
+/* Sets the style of the top bar */
+div.page-header {
+     background-color: #333;
+     display: none;
+}
+ div.page-header > div > a {
+     min-height: 35px !important;
+     width: 100%;
+}
+ div.page-header img.header-logo {
+     margin: 13px 6px 0 40px;
+     height: 20px;
+     float: left;
+}
+
+/* Sets the style of the top bar navigation options */
+ .toolbar.global-menu {
+     background: #333;
+     height: 48px;
+     border-color: transparent;
+     font-family: "Ubuntu", -apple-system, "Segoe UI", "Roboto", "Oxygen", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+}
+ .toolbar.global-menu > a:hover, .toolbar.global-menu a.open {
+     background: rgba(255, 255, 255, 0.2) !important;
+}
+ .toolbar.global-menu > a {
+     font-size: 14px;
+     height: 46px;
+     padding: 3px 20px 0 20px;
+}
+
+/* Sets the style of the category title */
+ .category-title {
+     color: #333333;
+     font-family: "Ubuntu", -apple-system, "Segoe UI", "Roboto", "Oxygen", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+}
+
+/* Sets the color of the breadcrumb menu */
+ .main-breadcrumb {
+     background-color: #f6f6f6 !important;
+     border-bottom: 1px solid #e6e6e6 !important;
+}
+
+/* Sets the style of the category header menu */
+ .category-header {
+     border-bottom: 1px solid #e6e6e6;
+     border-top: none;
+     padding: 12px 38px;
+     background: #f6f6f6;
+}
+
+/* Sets the style of the search page header menu */
+ .search-page header{
+ 	 margin-top: 0;
+     border-bottom: 1px solid #e6e6e6;
+     padding: 12px 38px;
+     background: #f6f6f6;
+}
+ .search-page header .title{
+     color: #333333;
+     padding-top: 0;
+     margin-bottom: 0;
+     border-bottom: none;
+}
+ .search-page header .title .text {
+	margin-left: 0;
+	color: #333333;
+    font-family: "Ubuntu", -apple-system, "Segoe UI", "Roboto", "Oxygen", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+}
+ .search-page header .title .text h2 {
+	color: #333333;
+	font-weight: normal;
+    font-family: "Ubuntu", -apple-system, "Segoe UI", "Roboto", "Oxygen", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+}
+
+/* Sets the style of the information text for a given category */
+ .category-info {
+     color: #777;
+     font-family: "Ubuntu", -apple-system, "Segoe UI", "Roboto", "Oxygen", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+}
+ .category-info h2 {
+     color: #333333;
+     font-family: "Ubuntu", -apple-system, "Segoe UI", "Roboto", "Oxygen", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+     font-weight: 100;
+}
+
+/* Sets the style of the list of categories */
+ ul.category-list {
+     border-left: 1px solid #e6e6e6;
+     border-right: 1px solid #e6e6e6;
+     border-top: 1px solid #e6e6e6;
+     border-radius: 8px;
+}
+ul.category-list li {
+     border-radius: 8px;
+}
+ ul.category-list li a {
+     color: #06c;
+}
+
+/* Sets the style of the list of category sidebar */
+ .category-sidebar > .title h2 {
+     color: #919191;
+}
+
+/* Sets the style of the top bar on event pages */
+ .event-page-header .button-bar .i-button:not(.label), .event-page-header .button-bar .categorynav .category-list .item .button-wrapper .action-button:not(.label), .categorynav .category-list .item .button-wrapper .event-page-header .button-bar .action-button:not(.label), .event-page-header .button-bar .action-button:not(.label) {
+     color: white;
+}
+ .event-page-header .button-bar .i-button:not(.label):hover, .event-page-header .button-bar .action-button:not(.label):hover, .event-page-header .button-bar .i-button:not(.label).open, .event-page-header .button-bar .action-button:not(.label).open {
+     color: #ffffff;
+     background: rgba(255, 255, 255, 0.2) !important;
+     background-image: none;
+}
+
+/* Sets the margin on the upper-left user menu */
+ .flexcol {
+     margin-top: 2px;
+}
+
+/* Sets the color of the "Public"/"Private" icon */
+ .i-button.accept:not(.label):not(.borderless):not(.text-color):hover, div.session-bar .i-button.protection-public:not(.label):not(.borderless):not(.text-color):hover, div.session-bar .protection-public.action-button:not(.label):not(.borderless):not(.text-color):hover, .accept.action-button:not(.label):not(.borderless):not(.text-color):hover {
+     background: #ED764D !important;
+}
+ .i-button.accept:not(.label):not(.borderless):not(.text-color):hover, div.session-bar .i-button.protection-public:not(.label):not(.borderless):not(.text-color):hover, div.session-bar .protection-public.action-button:not(.label):not(.borderless):not(.text-color):hover, .accept.action-button:not(.label):not(.borderless):not(.text-color):hover, .i-button.accept:not(.label):not(.borderless):not(.text-color):active, div.session-bar .i-button.protection-public:not(.label):not(.borderless):not(.text-color):active, div.session-bar .protection-public.action-button:not(.label):not(.borderless):not(.text-color):active, .accept.action-button:not(.label):not(.borderless):not(.text-color):active {
+     border-color: #ED764D;
+}
+ .i-button.accept:not(.label):not(.borderless):not(.text-color), div.session-bar .i-button.protection-public:not(.label):not(.borderless):not(.text-color), div.session-bar .protection-public.action-button:not(.label):not(.borderless):not(.text-color), .accept.action-button:not(.label):not(.borderless):not(.text-color) {
+     border-radius: 2px 0 0 2px;
+     background: #E95420;
+     border-color: #E95420;
