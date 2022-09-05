@@ -1,3 +1,10 @@
+/* this blanks the page until the javascript is parsed and sets the visibility back to normal.
+	This is meant to avoid the spring-back effect */
+body {
+  visibility: hidden;
+  background: #fff !important;
+}
+
 a {
      color: #06c;
 }
