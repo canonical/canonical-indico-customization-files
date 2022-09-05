@@ -22,7 +22,7 @@ div.page-header {
      background: #333;
      height: 48px;
      border-color: transparent;
-     font-family: "Ubuntu", -apple-system, "Segoe UI", "Roboto", "Oxygen", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+     font-family: "Ubuntu", sans-serif;
 }
  .toolbar.global-menu > a:hover, .toolbar.global-menu a.open {
      background: rgba(255, 255, 255, 0.2) !important;
@@ -36,7 +36,7 @@ div.page-header {
 /* Sets the style of the category title */
  .category-title {
      color: #333333;
-     font-family: "Ubuntu", -apple-system, "Segoe UI", "Roboto", "Oxygen", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+     font-family: "Ubuntu", sans-serif;
 }
 
 /* Sets the color of the breadcrumb menu */
@@ -69,22 +69,22 @@ div.page-header {
  .search-page header .title .text {
 	margin-left: 0;
 	color: #333333;
-    font-family: "Ubuntu", -apple-system, "Segoe UI", "Roboto", "Oxygen", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+    font-family: "Ubuntu", sans-serif;
 }
  .search-page header .title .text h2 {
 	color: #333333;
 	font-weight: normal;
-    font-family: "Ubuntu", -apple-system, "Segoe UI", "Roboto", "Oxygen", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+    font-family: "Ubuntu", sans-serif;
 }
 
 /* Sets the style of the information text for a given category */
  .category-info {
      color: #777;
-     font-family: "Ubuntu", -apple-system, "Segoe UI", "Roboto", "Oxygen", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+     font-family: "Ubuntu", sans-serif;
 }
  .category-info h2 {
      color: #333333;
-     font-family: "Ubuntu", -apple-system, "Segoe UI", "Roboto", "Oxygen", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+     font-family: "Ubuntu", sans-serif;
      font-weight: 100;
 }
 
