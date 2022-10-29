@@ -143,3 +143,12 @@ ul.category-list li {
      border-color: #E95420;
      color: #ffffff !important;
 }
+
+/* Always show legend items in detailed view */
+#timeTableLegend, #legendItemContainer .legendItem {
+     display: block !important;
+}
+
+#timeTableLegend .legendCloseButton, #legendMainToggle, #timeTableLegend #showMoreLink {
+     display: none;
+}
