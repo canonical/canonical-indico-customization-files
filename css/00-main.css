@@ -146,9 +146,69 @@ ul.category-list li {
 
 /* Always show legend items in detailed view */
 #timeTableLegend, #legendItemContainer .legendItem {
-     display: block !important;
+    display: block !important;
 }
 
 #timeTableLegend .legendCloseButton, #legendMainToggle, #timeTableLegend #showMoreLink {
-     display: none;
+    display: none;
+}
+
+/* Add speaker images on contribution pages */
+.speaker-item {
+    float: left;
+    margin-inline-end: 20px;
+}
+
+.speaker-list {
+    display: inline-block;
+}
+
+.speaker-item .avatar-image {
+    vertical-align: middle;
+    display: inline-block;
+}
+.speaker-item .avatar-image img {
+    width: 64px;
+    height: 64px;
+}
+
+.speaker-item-inline .avatar-image {
+    display: none;
+}
+
+.speaker-item-inline div {
+    display: inline
+}
+
+
+.speaker-item .avatar-image .ui.circular.label {
+    padding: 2px !important;
+}
+
+.speaker-item > .speaker-info {
+    display: inline-block;
+    vertical-align: middle;
+}
+.speaker-item > .speaker-info {
+    font-size: 1.1em;
+}
+
+.speaker-info > .speaker-name > .pronouns {
+    color: #aea79f;
+}
+
+.speaker-info > .affiliation > .text::before {
+    content: "(";
+}
+
+.speaker-info > .affiliation > .text::after {
+    content: ")";
+}
+
+.speaker-item > .speaker-info > .affiliation > .text::before {
+    content: "";
+}
+
+.speaker-item > .speaker-info > .affiliation > .text::after {
+    content: "";
 }
