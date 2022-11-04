@@ -249,13 +249,13 @@
     height:32px;
     width:32px;
 }
-#canonical-footer .p-inline-list-icons .p-inline-list__link--twitter:hover .twitter-icon{
+#canonical-footer .p-inline-list-icons .p-inline-list__link--twitter:hover .twttr-icon{
     fill:#1da1f2;
 }
 #canonical-footer .p-inline-list-icons .p-inline-list__link--facebook:hover .facebook-icon{
     fill:#3b5898;
 }
-#canonical-footer .p-inline-list-icons .p-inline-list__link--linkedin:hover .linkedin-icon{
+#canonical-footer .p-inline-list-icons .p-inline-list__link--linkedin:hover .lnkdn-icon{
     fill:#0274b3;
 }
 #canonical-footer .p-inline-list-icons .p-inline-list__link--rss:hover .rss-icon{
