@@ -197,6 +197,10 @@ ul.category-list li {
     color: #aea79f;
 }
 
+.speaker-item .affiliation .text {
+  max-width: 14em;
+}
+
 .speaker-info > .affiliation > .text::before {
     content: "(";
 }
