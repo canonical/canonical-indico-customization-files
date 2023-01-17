@@ -216,3 +216,8 @@ ul.category-list li {
 .speaker-item > .speaker-info > .affiliation > .text::after {
     content: "";
 }
+
+/* Workaround for https://github.com/indico/indico/issues/5624 . Revisit this during upgrades */
+.ck-content[contenteditable] p {
+  margin-bottom: 1em;
+}
