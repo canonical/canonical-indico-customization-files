@@ -49,11 +49,11 @@
 {% macro canonical_find_pronouns(contribution, user) -%}
       {# There is likely a better way to do this. Should upstream a pronouns field in the user profile #}
       {%- set inpersonreg = contribution.event.registration_forms | selectattr('title', 'equalto', 'In-person Registration') | first | default(None) -%}
-      {%- set found = namespace(value=0) -%}
-      {%- if inpersonreg -%}
+      {%- set found = namespace(value="") -%}
+      {%- if user and inpersonreg -%}
           {%- set found.value = canonical_find_pronouns_field(inpersonreg, user) -%}
       {%- endif -%}
-      {%- if not found.value -%}
+      {%- if user and not found.value -%}
 	  {%- for regform in contribution.event.registration_forms if not found.value -%}
 	      {%- set found.value = canonical_find_pronouns_field(regform, user) -%}
 	  {%- endfor -%}
@@ -63,7 +63,7 @@
 
 {% macro canonical_render_user_data(user_data, show_title=true, italic_affiliation=false, contribution=None) -%}
     <div class="avatar-image">
-      <img src="{{ user_data.person.user.avatar_url}}" alt="" class="ui large circular label">
+      <img src="{{ user_data.person.user.avatar_url|default('/assets/avatar/' + ((user_data.person.first_name + ' ' + user_data.person.last_name)|urlencode) + '.svg')}}" alt="" class="ui large circular label">
     </div>
 
     <div class="speaker-info">
@@ -84,7 +84,7 @@
 
       {%- if user_data.affiliation -%}
 	  <span class="affiliation">
-	      <span class="text">
+	      <span class="text" title="{{user_data.affiliation}}">
 		  {%- if italic_affiliation -%}
 		      <em>{{ user_data.affiliation }}</em>
 		  {%- else -%}

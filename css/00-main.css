@@ -198,7 +198,7 @@ ul.category-list li {
 }
 
 .speaker-item .affiliation .text {
-  max-width: 14em;
+  max-width: 18em !important;
 }
 
 .speaker-info > .affiliation > .text::before {
