@@ -38,61 +38,61 @@
 {% macro canonical_find_pronouns_field(regform, user) %}
     {%- set reg = regform.get_registration(user) -%}
     {%- if reg -%}
-	{%- for field in reg.data -%}
-	    {%- if field.field_data.field.title == "Pronouns" -%}
-		{{ field.data }}
-	    {%- endif -%}
-	{%- endfor -%}
+        {%- for field in reg.data -%}
+            {%- if field.field_data.field.title == "Pronouns" -%}
+                {{ field.data }}
+            {%- endif -%}
+        {%- endfor -%}
     {%- endif -%}
 {%- endmacro %}
 
 {% macro canonical_find_pronouns(contribution, user) -%}
-      {# There is likely a better way to do this. Should upstream a pronouns field in the user profile #}
-      {%- set inpersonreg = contribution.event.registration_forms | selectattr('title', 'equalto', 'In-person Registration') | first | default(None) -%}
-      {%- set found = namespace(value="") -%}
-      {%- if user and inpersonreg -%}
-          {%- set found.value = canonical_find_pronouns_field(inpersonreg, user) -%}
-      {%- endif -%}
-      {%- if user and not found.value -%}
-	  {%- for regform in contribution.event.registration_forms if not found.value -%}
-	      {%- set found.value = canonical_find_pronouns_field(regform, user) -%}
-	  {%- endfor -%}
-      {%- endif -%}
-      {{ found.value }}
+    {# There is likely a better way to do this. Should upstream a pronouns field in the user profile #}
+    {%- set inpersonreg = contribution.event.registration_forms | selectattr('title', 'equalto', 'In-person Registration') | first | default(None) -%}
+    {%- set found = namespace(value="") -%}
+    {%- if user and inpersonreg -%}
+        {%- set found.value = canonical_find_pronouns_field(inpersonreg, user) -%}
+    {%- endif -%}
+    {%- if user and not found.value -%}
+        {%- for regform in contribution.event.registration_forms if not found.value -%}
+            {%- set found.value = canonical_find_pronouns_field(regform, user) -%}
+        {%- endfor -%}
+    {%- endif -%}
+    {{ found.value }}
 {%- endmacro %}
 
 {% macro canonical_render_user_data(user_data, show_title=true, italic_affiliation=false, contribution=None) -%}
     <div class="avatar-image">
-      <img src="{{ user_data.person.user.avatar_url|default('/assets/avatar/' + ((user_data.person.first_name + ' ' + user_data.person.last_name)|urlencode) + '.svg')}}" alt="" class="ui large circular label">
+        <img src="{{ user_data.person.user.avatar_url|default('/assets/avatar/' + ((user_data.person.first_name + ' ' + user_data.person.last_name)|urlencode) + '.svg')}}" alt="" class="ui large circular label">
     </div>
 
     <div class="speaker-info">
-      <div class="speaker-name">
-	{% if user_data.title and show_title -%}
-	    <span class="speaker-title">
-		{{- user_data.title -}}
-	    </span>
-	{%- endif %}
-	<span>{{ user_data.display_full_name }}</span>
-	{% if contribution -%}
-	  {%- set pronouns = canonical_find_pronouns(contribution, user_data.person.user) -%}
-	  {%- if pronouns -%}
-	    <span class="pronouns">({{pronouns}})</span>
-	  {%- endif -%}
-	{%- endif %}
-      </div>
+        <div class="speaker-name">
+            {% if user_data.title and show_title -%}
+                <span class="speaker-title">
+                    {{- user_data.title -}}
+                </span>
+            {%- endif %}
+            <span>{{ user_data.display_full_name }}</span>
+            {% if contribution -%}
+                {%- set pronouns = canonical_find_pronouns(contribution, user_data.person.user) -%}
+                {%- if pronouns -%}
+                    <span class="pronouns">({{pronouns}})</span>
+                {%- endif -%}
+            {%- endif %}
+        </div>
 
-      {%- if user_data.affiliation -%}
-	  <span class="affiliation">
-	      <span class="text" title="{{user_data.affiliation}}">
-		  {%- if italic_affiliation -%}
-		      <em>{{ user_data.affiliation }}</em>
-		  {%- else -%}
-		      {{ user_data.affiliation }}
-		  {%- endif -%}
-	      </span>{#--#}
-	  </span>
-      {%- endif -%}
+        {%- if user_data.affiliation -%}
+            <span class="affiliation">
+                <span class="text" title="{{user_data.affiliation}}">
+                    {%- if italic_affiliation -%}
+                        <em>{{ user_data.affiliation }}</em>
+                    {%- else -%}
+                        {{ user_data.affiliation }}
+                    {%- endif -%}
+                </span>{#--#}
+            </span>
+        {%- endif -%}
     </div>
 {%- endmacro %}
 
