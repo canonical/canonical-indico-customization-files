@@ -130,18 +130,13 @@ ul.category-list li {
 }
 
 /* Sets the color of the "Public"/"Private" icon */
- .i-button.accept:not(.label):not(.borderless):not(.text-color):hover, div.session-bar .i-button.protection-public:not(.label):not(.borderless):not(.text-color):hover, div.session-bar .protection-public.action-button:not(.label):not(.borderless):not(.text-color):hover, .accept.action-button:not(.label):not(.borderless):not(.text-color):hover {
-     background: #ED764D !important;
-     color: #ffffff !important;
+.i-button.accept:not(.label):not(.borderless):not(.text-color):hover, div.session-bar .i-button.protection-public:not(.label):not(.borderless):not(.text-color):hover, div.session-bar .protection-public.action-button:not(.label):not(.borderless):not(.text-color):hover, .accept.action-button:not(.label):not(.borderless):not(.text-color):hover {
+    background: #fff !important;
+    color: #111 !important;
 }
- .i-button.accept:not(.label):not(.borderless):not(.text-color):hover, div.session-bar .i-button.protection-public:not(.label):not(.borderless):not(.text-color):hover, div.session-bar .protection-public.action-button:not(.label):not(.borderless):not(.text-color):hover, .accept.action-button:not(.label):not(.borderless):not(.text-color):hover, .i-button.accept:not(.label):not(.borderless):not(.text-color):active, div.session-bar .i-button.protection-public:not(.label):not(.borderless):not(.text-color):active, div.session-bar .protection-public.action-button:not(.label):not(.borderless):not(.text-color):active, .accept.action-button:not(.label):not(.borderless):not(.text-color):active {
-     border-color: #ED764D;
-}
- .i-button.accept:not(.label):not(.borderless):not(.text-color), div.session-bar .i-button.protection-public:not(.label):not(.borderless):not(.text-color), div.session-bar .protection-public.action-button:not(.label):not(.borderless):not(.text-color), .accept.action-button:not(.label):not(.borderless):not(.text-color) {
-     border-radius: 2px 0 0 2px;
-     background: #E95420;
-     border-color: #E95420;
-     color: #ffffff !important;
+.i-button.accept:not(.label):not(.borderless):not(.text-color), div.session-bar .i-button.protection-public:not(.label):not(.borderless):not(.text-color), div.session-bar .protection-public.action-button:not(.label):not(.borderless):not(.text-color), .accept.action-button:not(.label):not(.borderless):not(.text-color) {
+    background: #fff;
+    color: #111 !important;
 }
 
 /* Always show legend items in detailed view */
