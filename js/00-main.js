@@ -20,6 +20,10 @@ jQuery( function () {
 		}
 	}
 
+	// update favicon
+	const favicon = $('link[rel="shortcut icon"]');
+	favicon.attr('href', '/static/custom/files/favicon.ico');
+
 	// set the display to visible now that the js has been parsed
 	jQuery(document.body).css({visibility: 'visible'});
 });
