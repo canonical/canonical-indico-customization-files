@@ -48,8 +48,29 @@ div.page-header img.header-logo {
 
 /* Sets the style of the category title */
 .category-title {
-    color: #333333;
-    font-family: "Ubuntu", sans-serif;
+    display: none;
+}
+
+/* Style for the category nav layout */
+.category-header {
+    padding-right: 0.5rem;
+}
+
+#category-toolbar,
+#category-toolbar > .group:first-of-type {
+    width: 100%;
+}
+
+.toolbar .group #search-box {
+    margin-left: 0;
+}
+
+/* Hide unwanted nav items */
+#global-menu > menu > li > a[href="/"],
+#global-menu > menu > li > ind-menu,
+#global-menu > menu > li > a[href="/rooms/"],
+#global-menu > menu > li > a[href="/user/dashboard/"] {
+  display: none;
 }
 
 /* Sets the color of the breadcrumb menu */
@@ -62,7 +83,7 @@ div.page-header img.header-logo {
 .category-header {
     border-bottom: 1px solid #e6e6e6;
     border-top: none;
-    padding: 12px 38px;
+    padding: 12px 0.5rem 12px 40px;
     background: #f6f6f6;
 }
 

@@ -11,35 +11,11 @@ document.addEventListener("DOMContentLoaded", function () {
 			const $logo = $targetDiv.find('a').first();
 			$toolbar.insertAfter($logo);
 
-			// update and remove some navigation items
-			$toolbar.find('a, button').each(function () {
-				switch (jQuery(this).text().toLowerCase().trim().replace(' ', '_')) {
-					case 'home':
-					case 'create_event':
-					case 'my_profile':
-					case 'room_booking':
-						jQuery(this).closest('li').remove();
-						break;
-					case 'administration':
-						jQuery(this).text('Admin settings');
-					default:
-						break;
-				}
-			});
-
-			// removes the catergory title
-			const categoryTitle = jQuery('.category-title');
-			categoryTitle.remove();
-
-			// align secondary nav items
-			const categoryHeader = jQuery('.category-header');
-			categoryHeader.css({ paddingRight: '0.5rem' });
-			const categoryToolbar = jQuery('#category-toolbar');
-			categoryToolbar.css({ width: '100%' });
-			const searchContainer = categoryToolbar.find('.group').first();
-			searchContainer.css({ width: '100%' });
-			const searchBox = jQuery('#search-box');
-			searchBox.css({ marginLeft: '0' });
+			// update administration button text
+			const administrationBtn = $toolbar.find('a:contains("Administration")');
+			if (administrationBtn.length) {
+				administrationBtn.text('Admin settings');
+			}
 
 			// display moved header
 			jQuery('div.page-header').css({ display: 'block' });
