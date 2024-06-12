@@ -281,3 +281,10 @@ div.session-bar .protection-public.action-button:not(.label):not(.borderless):no
 .ck-content[contenteditable] p {
     margin-bottom: 1em;
 }
+
+/* Style to improve the calendar picker */
+
+/* Workaround for https://github.com/canonical/canonical-indico-customization-files/issues/29 */
+.CalendarMonth_caption select.datepicker-select:first-child {
+    padding-left: 3rem !important;
+}
